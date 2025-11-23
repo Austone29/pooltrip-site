@@ -66,6 +66,346 @@
       min-height: 80vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       background-image:
-        linear-gradient(to bottom, rgba(0, 29, 61, 0.65), rgba(0, 29, 61
+        linear-gradient(to bottom, rgba(0, 29, 61, 0.7), rgba(0, 29, 61, 0.9)),
+        url('https://images.pexels.com/photos/2613273/pexels-photo-2613273.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center;
+      text-align: left;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-wave {
+      height: 4px;
+      width: 80px;
+      margin-top: 0.25rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--aqua));
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 28rem;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 0.75rem;
+    }
+
+    .hero-right {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: left;
+    }
+
+    main { background: #fff; }
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 34rem;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 123, 255, 0.08);
+      color: var(--blue);
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .benefits {
+      background: var(--bg-light);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .benefit-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.98rem;
+    }
+
+    .benefit-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .form-section {
+      background: #ffffff;
+    }
+
+    .form-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      padding: 1.75rem 1.75rem 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      min-height: 600px;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      background: #020b1c;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.8rem;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: left;
+      }
+      .hero-right {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      section {
+        padding: 2.5rem 0;
+      }
+      .form-card {
+        padding: 1.25rem 1.25rem 1.75rem;
+      }
+      iframe {
+        min-height: 700px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero-inner">
+    <div>
+      <div class="logo">
+        <div class="logo-text">PoolTrip</div>
+        <div class="logo-wave"></div>
+      </div>
+      <div class="hero-eyebrow">DFW • Vacation Pool Cleaning</div>
+      <h1 class="hero-title">Going on vacation?</h1>
+      <p class="hero-subtitle">
+        We clean your pool while you’re gone, so you can come home to clear, sparkling water.
+      </p>
+      <a href="#reserve" class="btn">Reserve Your Cleaning</a>
+      <div class="hero-note">
+        Booking takes less than 60 seconds. Currently serving pool owners across Dallas–Fort Worth.
+      </div>
+    </div>
+    <div class="hero-right">
+      <div>“We came back from a 10-day trip to a perfect pool.”</div>
+      <div>— Jessica, Plano</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- How it works -->
+  <section id="how">
+    <div class="container">
+      <h2 class="section-title">How PoolTrip works</h2>
+      <p class="section-subtitle">
+        Book in under a minute. We’ll match you with a trusted local pool pro and schedule cleaning while you’re away.
+      </p>
+      <div class="steps-grid">
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <div class="card-title">1. Tell us your trip dates</div>
+          <div class="card-text">
+            Share when you’ll be away and a few details about your pool and location.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <div class="card-title">2. We match you with a local pro</div>
+          <div class="card-text">
+            We connect you with a vetted pool company in your part of DFW that fits your needs.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💧</div>
+          <div class="card-title">3. Come home to a clean pool</div>
+          <div class="card-text">
+            Your pool is serviced while you’re gone—no green water, no stress when you get back.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Why DFW pool owners use PoolTrip</h2>
+      <p class="section-subtitle">
+        Perfect for family vacations, business travel, and short-term rentals. We make it easy to keep your pool in top shape while you’re away.
+      </p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-title">Peace of mind while you’re away</div>
+          <div class="benefit-text">
+            Know your pool is professionally maintained, even when you’re out of town for a week or more.
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-title">Trusted local pool pros</div>
+          <div class="benefit-text">
+            We partner with vetted, insured pool companies across the Dallas–Fort Worth metro area.
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-title">Great for vacations & rentals</div>
+          <div class="benefit-text">
+            Ideal for extended trips, Airbnb/VRBO hosts, and anyone who doesn’t want to risk a green pool.
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-title">Simple online booking</div>
+          <div class="benefit-text">
+            No phone tag or quotes that drag on. Submit your details and we’ll handle the matchmaking.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section id="reserve" class="form-section">
+    <div class="container">
+      <h2 class="section-title">Reserve your vacation pool cleaning</h2>
+      <p class="section-subtitle">
+        Tell us about your trip and your pool. We’ll match you with a local pro and follow up with next steps.
+      </p>
+      <div class="form-card">
+        <!-- Replace YOUR_TALLY_FORM_URL with your actual Tally form URL ID -->
+        <iframe
+          src="https://tally.so/r/YOUR_TALLY_FORM_URL"
+          title="PoolTrip Booking Form"
+        ></iframe>
+        <p class="form-note">
+          We only share your details with a single local pool company to arrange service. No spam, ever.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © PoolTrip 2025. All rights reserved.
+</footer>
+
+</body>
+</html>
